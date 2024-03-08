@@ -3,6 +3,7 @@ package com.br.lizzera.portariaeasy.entities;
 import java.util.UUID;
 
 import lombok.Data;
+
 @Data
 public class User {
 

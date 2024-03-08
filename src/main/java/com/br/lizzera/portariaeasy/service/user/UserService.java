@@ -7,10 +7,12 @@ import com.br.lizzera.portariaeasy.entities.User;
 
 @Service
 public class UserService implements IUserService{
+    
     @Autowired
     private IUserRepository _userRepository;
 
     public String createUser(CreateUserRequest request){
+
         var user = new User(request.name, request.email, request.password);
 
         _userRepository.save(user);
