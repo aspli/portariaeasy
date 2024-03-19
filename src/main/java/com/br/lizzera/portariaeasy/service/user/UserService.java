@@ -1,4 +1,6 @@
 package com.br.lizzera.portariaeasy.service.user;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,5 +21,9 @@ public class UserService implements IUserService{
 
         return user.getId().toString();
     
+    }
+
+    public List<User> getAllUser(){
+        return _userRepository.findAll();
     }
 }
